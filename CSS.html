@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <title>CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #d6eaf8;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+        }
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+            border-left: 10px solid #f5b041;
+    
+        }
+        .photo {
+            flex: 0 0 120px;
+            margin-right: 20px;
+            text-align: center;
+        }
+        .photo img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .info {
+            font-size: 14px;
+            text-align: left;
+            margin-top: 10px;
+            width: 140px;
+            white-space: nowrap;
+        }
+        .content {
+            flex: 1;
+        }
+        .company {
+            max-width: 90%;
+            font-size: 22px;
+            font-weight: bold;
+            color: #784212;
+            background-color: #f9e79f;
+            padding: 5px 15px;
+            text-align: center;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            margin-left: auto;
+            white-space: nowrap;
+           
+        }
+        .name {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .year {
+            font-size: 14px;
+            color: gray; 
+        }
+        .description {
+            max-width: 90%;
+            margin-top: 10px;
+            font-size: 14px;
+            line-height: 1.5;
+            background-color: #fcf3cf;
+            padding: 10px;
+            border-radius: 5px;
+            margin-left: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="photo">
+                <img src="C:\university\CS_Website\photo\林家羽.png" alt="林家羽">
+                <div class="info">
+                    <div class="name" id="person-name">林家羽</div><br>實習年份：2023<br>實習公司：煜興科技有限公司<br>類別：學期實習
+                </div>
+            </div>
+            <div class="content">
+                <div class="company">煜興科技有限公司</div>
+                <div class="description">
+                    一開始抱著忐忑的心情去面試，經歷重重關卡後收到面試通過的通知， 突然就有點害怕去實習，不知道自己能不能做好，但是我覺得如果不去 實習，未來可能會後悔，於是就硬著頭皮開始上班。 
+                    前一個禮拜都在熟悉公司的環境，過了幾天主管開始丟作業給我寫， 再過了兩個月後，開始做 LINE BOT 專案的東西，在這裡一個禮拜要開一 次系統部的會議，確認現在做的方向沒有問題，在會議上也要盡量能丟 新的成果出來，或者在這個時間也可以提出目前遇到的難關，主管們會 給很實用的經驗。
+                    我很慶幸自己做對了選擇，進入了實習，相比正職少了一份時間壓 力，除了可以更確認未來要走的方向，也學到了更多自我管理、自己學 習的能力，也能知道現在市場需要的甚麼。實習是一個很好在行業裡學 習的地方，主管也會熱心地傳授經驗，這些是在學校裡面沒有的。
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="photo">
+                <img src="C:\university\CS_Website\photo\劉晏誠.png" alt="劉晏誠">
+                <div class="info">
+                    <div class="name" id="person-name">劉晏誠</div><br>實習年份：2023<br>實習公司：中國信託商業銀行<br>類別：學期實習
+                </div>
+            </div>
+            <div class="content">
+                <div class="company">中國信託商業銀行股份有限公司</div>
+                <div class="description">
+                    實習公司為中國信託商業銀行，這段實習期間，在該銀行開發暨測試部的台中開發中心科學習，並參與了一系列令人興奮且有挑戰性的實習課程。課程主要分為Java及RPA的技術培訓。
+                    初期學習Java的前後端整合，在實習中，透過講師說明講解，並搭配實作，充實地複習物件導向，為後續開發打下基礎。Spring boot為結束前面物件導向課程後，遇到最多瓶頸的課程，因對於軟體開發架構概念缺法足夠理解，導致撰寫時一度卡關。透過自行複習上課內容及閱讀網上補充，開始漸漸上手。
+                    接著是RPA（Robotic Process Automation）課程，類似寫腳本，可將重複性工作交由電腦完成，RPA常遇到流程執行不如預期，這時可將流程拆分，將問題拆分並逐步嘗試是否可行，自身是在後期撰寫時才比較得心應手。
+                    中信實習課程規畫很有條理，在每階段都有不同的作業挑戰，經歷重重關卡，除了獲得成就感，對於問題解決的能力也有提升，尤其是Java課程，最終實作評比獲得第二名殊榮，謝謝Mentor及同學在我遇到瓶頸時都傾囊向授，收穫良多。
+                    本次實習為我大學期間的第三次校外實習，基於我的實習經驗，我衷心鼓勵學弟妹們積極參與實習。實習是一個寶貴的機會，可將學校所學應用於實際工作場景，有機會與業界專業人士互動，並拓展人脈。同時實習也是一個了解自己專業興趣和職業發展方向的機會，幫助你在未來的職業生涯中作出更明確的選擇。請把握實習機會，相信你們將會在實習中獲得不錯的成長和收穫！
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
