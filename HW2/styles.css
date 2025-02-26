@@ -25,16 +25,55 @@ img {
     cursor: pointer;
     white-space: nowrap;
 }
+.school-name-color {
+    display: inline-block;
+    margin-top: 15px;
+    margin-left: 15px;
+    font-weight: 500;
+    color: #F9EEB6;
+    text-decoration: none;
+}
 .p {
     font-size: 16px;
+    font-weight: 600;
+}
+.icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 8px;
+}
+.icons-img{
+    width: 45px;
+}
+.login-style{
+    width: 75px;
+    height: 40px;
+    background-color: rgb(78, 157, 189);
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 38px;
+    font-size: 20px;
+    text-decoration: none;
+    cursor: pointer;
 }
 .upperblock {
     background-color: #ffffff;
     margin-top: 15px;
+    width: 100%;
+}
+.school-name {
+    width: 100%;
+    clip-path: polygon(0px 0px, 480px 0px, 430px 100px, 0px 100px);
+    margin-top: 8px;
+    background-color: #59B1D4;
 }
 .header {
     margin-top: 8px;
     background-color: #59B1D4;
+    
 }
 
 .header_name1 {
@@ -44,8 +83,14 @@ img {
 
 }
 .header_name2 {
-    display: none;
+    display: inline-block;
+    position: relative;
+    left: 2%;
+    top: -2px;
     font-size: 16px;
+    line-height: 1rem;
+    font-weight: 600;
+    font-family: "Trebuchet MS";
 
 }
 .header_name3 {
@@ -187,4 +232,59 @@ img {
     cursor: pointer;
     text-decoration: none;
     display: inline;
+}
+.pagination {
+    margin: auto;
+}
+.pagination-container {
+    padding: 16px 12px;
+    display: flex;
+}
+.base-cs-info{
+    background-color:#58829A;
+    color:white;
+    padding: 20px 5% 5px;
+    height: auto;
+    font-size: 16px;
+    white-space: nowrap;
+}
+.cs{
+    display: flex;
+}
+.cs-icon{
+    margin-right: 20px;
+    width: 150px;
+    height: 150px;
+}
+.cs-info{
+    display: block;
+    width: 100%;
+}
+.cs-info-title{
+    font-size: 22px;
+    margin-bottom: 12px;
+    margin-right: 10px;
+    display: block;
+}
+.addr-en{
+    display: block;
+    white-space: normal;
+}
+.tele-fax{
+    color: #F9EEB6;
+    white-space: nowrap;
+    text-decoration: none;
+    display: block;
+}
+.copyright{
+    opacity: 0.6;
+    font-size: 10px;
+    text-align: center;
+    white-space: normal;
+    margin-top: 10px;
+    border-top: 1px solid rgb(255, 255, 255);
+    line-height: 30px;
+}
+.cs-info p {
+    font-weight: normal;
 }
