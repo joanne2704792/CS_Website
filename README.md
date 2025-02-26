@@ -6,3 +6,4 @@
 
 ### W2 hw
 * [Download_area](https://joanne2704792.github.io/CS_Website/HW2/Download_area.html)
+![alt text](image.png)
