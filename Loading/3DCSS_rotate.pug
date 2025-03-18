@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title CSS 3D Loading Animation
+    link(rel="stylesheet" href="3DCSS_rotate.css")
+  body
+    - var text = "Loading..."
+    - var rings = 2
+    - var ringSectors = 30
+
+    .preloader
+      - for (let r = 0; r < rings; ++r) {
+        .preloader__ring
+          - for (let s = 0; s < ringSectors; ++s) {
+            .preloader__sector=text[s] || ""
+          - }
+      - }
+
+    script(src="script.js")
