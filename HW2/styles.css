@@ -39,14 +39,19 @@ img {
     font-weight: 600;
 }
 .icons{
-    display: flex;
+    display: inline-flex;
     justify-content: flex-end;
-    align-items: center;
+    align-items: right;
     gap: 15px;
     margin-top: 8px;
 }
 .icons-img{
     width: 45px;
+
+}
+.lang-icons {
+    display: flex;
+    justify-content: flex-end;
 
 }
 .login-style{
