@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Rings Loading</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #121212;
+        }
+
+        .loader {
+            display: flex;
+            flex-wrap: wrap;
+            width: 200px;
+            height: 120px;
+            justify-content: center;
+            position: relative;
+        }
+
+        .ring {
+            width: 50px;
+            height: 50px;
+            border: 6px solid transparent;
+            border-radius: 50%;
+            position: absolute;
+            animation: spin 1.5s linear infinite, glow 1.5s ease-in-out infinite alternate;
+        }
+
+        /* 環的初始位置 */
+        .ring:nth-child(1) { border-top-color: #00FFFF; box-shadow: 0 0 15px #00FFFF; top: 0; left: 25px; }
+        .ring:nth-child(2) { border-top-color: #8A2BE2; box-shadow: 0 0 15px #8A2BE2; top: 0; left: 75px; }
+        .ring:nth-child(3) { border-top-color: #FFA500; box-shadow: 0 0 15px #FFA500; top: 40px; left: 0px; }
+        .ring:nth-child(4) { border-top-color: #FF1493; box-shadow: 0 0 15px #FF1493; top: 40px; left: 50px; } /* 4 號環（中心環） */
+        .ring:nth-child(5) { border-top-color: #00FA9A; box-shadow: 0 0 15px #00FA9A; top: 40px; left: 100px; }
+        .ring:nth-child(6) { border-top-color: #FF6347; box-shadow: 0 0 15px #FF6347; top: 80px; left: 25px; }
+        .ring:nth-child(7) { border-top-color: #32CD32; box-shadow: 0 0 15px #32CD32; top: 80px; left: 75px; }
+
+        /* 旋轉動畫 */
+        /* @keyframes spin {
+            0% ,100%{ transform: ); }
+            50% { transform: ; }
+        } */
+
+        /* 發光動畫 */
+        @keyframes glow {
+            100% { box-shadow: 0 0 25px currentColor; }
+        }
+
+        /* 收縮到 4 號環再張開 */
+        @keyframes shrink-expand {
+            0%, 100% { 
+                transform: translate(0, 0) scale(1) rotate(0deg); }
+            50% { 
+                /* top: 40px; left: 50px; */
+                transform: translate(25px, 40px) rotate(360deg); } /* 讓環移動到 4 號環並縮小 */
+            /* 100% { transform: translate(0, 0) scale(1); } */
+        }
+
+        /* 讓外圈 6 個環參與收縮動畫 */
+        .ring:nth-child(1) { animation: spin 1.5s linear infinite, glow 1.5s ease-in-out infinite alternate, shrink-expand 2.5s ease-in-out infinite; }
+        .ring:nth-child(2) { animation: spin 1.5s linear infinite, glow 1.5s ease-in-out infinite alternate, shrink-expand 2.5s ease-in-out infinite; }
+        .ring:nth-child(3) { animation: spin 1.5s linear infinite, glow 1.5s ease-in-out infinite alternate, shrink-expand 2.5s ease-in-out infinite; }
+        .ring:nth-child(5) { animation: spin 1.5s linear infinite, glow 1.5s ease-in-out infinite alternate, shrink-expand 2.5s ease-in-out infinite; }
+        .ring:nth-child(6) { animation: spin 1.5s linear infinite, glow 1.5s ease-in-out infinite alternate, shrink-expand 2.5s ease-in-out infinite; }
+        .ring:nth-child(7) { animation: spin 1.5s linear infinite, glow 1.5s ease-in-out infinite alternate, shrink-expand 2.5s ease-in-out infinite; }
+
+    </style>
+</head>
+<body>
+    <div class="loader">
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <div class="ring"></div>
+    </div>
+</body>
+</html>

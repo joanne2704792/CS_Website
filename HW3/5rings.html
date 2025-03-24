@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Rings Loading</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #121212;
+        }
+        .loader {
+            display: flex;
+            flex-wrap: wrap;
+            width: 140px;
+            justify-content: center;
+            position: relative; /*設定 loader 的定位為相對定位，方便對內部元素進行絕對定位。*/
+        }
+        .ring {
+            width: 50px;
+            height: 50px;
+            border: 6px solid transparent;
+            border-radius: 50%;
+            position: absolute; /*每個ring的位置為絕對定位*/
+            animation: spin 1.5s linear infinite, glow 1.5s ease-in-out infinite alternate;
+        }
+
+        /* 新的五環顏色與發光效果 */
+        .ring:nth-child(1) { border-top-color: #00FFFF; box-shadow: 0 0 15px #00FFFF; animation-delay: 0s; } /* 青藍 */
+        .ring:nth-child(2) { border-top-color: #8A2BE2; box-shadow: 0 0 15px #8A2BE2; animation-delay: 0.2s; } /* 紫羅蘭 */
+        .ring:nth-child(3) { border-top-color: #FFA500; box-shadow: 0 0 15px #FFA500; animation-delay: 0.4s; } /* 橘黃 */
+        .ring:nth-child(4) { border-top-color: #FF1493; box-shadow: 0 0 15px #FF1493; animation-delay: 0.6s; } /* 玫瑰粉 */
+        .ring:nth-child(5) { border-top-color: #00FA9A; box-shadow: 0 0 15px #00FA9A; animation-delay: 0.8s; } /* 翡翠綠 */
+
+        /* 旋轉動畫 */
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* 發光動畫 */
+        @keyframes glow {
+            /* 0% { box-shadow: 0 0 10px transparent; } */
+            100% { box-shadow: 0 0 25px currentColor; }
+        }
+
+        /* 調整環的位置（維持奧運五環排列） */
+        .ring:nth-child(1) { top: 0; left: 0; }      /* 青藍 */
+        .ring:nth-child(2) { top: 0; left: 50px; }   /* 紫羅蘭 */
+        .ring:nth-child(3) { top: 0; left: 100px; }  /* 橘黃 */
+        .ring:nth-child(4) { top: 30px; left: 25px; } /* 玫瑰粉 */
+        .ring:nth-child(5) { top: 30px; left: 75px; } /* 翡翠綠 */
+
+    </style>
+</head>
+<body>
+    <div class="loader">
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <div class="ring"></div>
+    </div>
+</body>
+</html>
