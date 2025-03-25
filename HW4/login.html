@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang = "zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="login.js" defer></script>
+</head>
+<body>
+    <!-- SVG 放在這個固定的 header-container 中 -->
+    <div class="header-container">
+        <svg viewBox="0 0 100 20">
+            <defs>
+                <linearGradient id="gradient" x1="0" x2="0" y1="0" y2="1">
+                    <stop offset="5%" stop-color="#326384"/>
+                    <stop offset="95%" stop-color="#123752"/>
+                </linearGradient>
+                <pattern id="wave" x="0" y="0" width="120" height="20" patternUnits="userSpaceOnUse">
+                    <path id="wavePath" d="M-40 9 Q-30 7 -20 9 T0 9 T20 9 T40 9 T60 9 T80 9 T100 9 T120 9 V20 H-40z" fill="url(#gradient)">
+                        <animateTransform
+                            attributeName="transform"
+                            begin="0s"
+                            dur="1.5s"
+                            type="translate"
+                            from="0,0"
+                            to="40,0"
+                            repeatCount="indefinite" />
+                    </path>
+                </pattern>
+            </defs>
+            <text text-anchor="middle" x="50" y="12" font-size="15" fill="url(#wave)" fill-opacity="0.6">Login</text>
+            <text text-anchor="middle" x="50" y="12" font-size="15" fill="url(#gradient)" fill-opacity="0.3">Login</text>
+        </svg>
+    </div>
+
+    <!-- 主要內容區域 -->
+    <form onsubmit="return validateForm();">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username" placeholder="請輸入帳號" required><br>
+
+        <label for="password">Password:</label><br>
+        <div class="password-container">
+            <input type="password" id="password" name="password" placeholder="請輸入密碼" required>
+            <span class="toggle-password" onclick="togglePassword()">
+                <img id="toggleIcon" src="https://img.icons8.com/ios-filled/50/000000/visible.png" alt="Toggle Password Visibility">
+            </span>
+        </div><br>
+
+        <label for="captchaInput">Captcha:</label><br>
+
+        <div class="captcha-container"> 
+            <div id="captchaDisplay"></div>
+            <button type="button" class="refresh-button" onclick="generateCaptcha()" >刷新驗證碼</button>
+        </div><br>
+        <input type="text" id="captchaInput" name="captchaInput" placeholder="請輸入驗證碼" required><br>
+
+        <input type="submit" value="登入">
+    </form>
+</body>
+
+
+
+</html>

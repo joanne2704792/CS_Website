@@ -1,0 +1,114 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    background: url('https://farm9.staticflickr.com/8760/17195790401_ceeeafcddb_o.jpg');
+    background-size: cover;
+    font-family: 'Cabin Condensed', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 120px; /* 確保 SVG 不會壓住內容 */
+}
+
+/* 讓 SVG 固定在網頁最上方 */
+.header-container {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    margin-top: 200px;
+    justify-content: center;
+    align-items: center;
+    position: absolute; /* 固定在頁面頂部 */
+    top: 0;
+    left: 0;
+    /*
+    background-color: rgba(255, 255, 255, 0.2); /* 半透明背景，保持美觀 */
+    /*backdrop-filter: blur(10px); /*背景模糊效果 
+    */
+    z-index: 1000; /* 確保 SVG 顯示在最前面 */
+}
+
+/* 調整 SVG 樣式 */
+svg {
+    font-weight: bold;
+    max-width: 600px;
+    height: auto;
+    margin-top: 0; /* 取消多餘的 margin */
+}
+
+.password-container{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/*眼睛圖示樣式*/
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+
+/* 眼睛圖示的大小 */
+.toggle-password img {
+    width: 20px;
+    height: 20px;
+}
+#captchaDisplay{
+    font-weight: 200;
+    font-size: 22px;
+    margin-bottom: 10px;
+    padding: 6px;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    width: 140px;
+    letter-spacing: 2px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+.captcha-container{
+    display: inline-flex;
+    align-items: center;
+}
+
+/* 刷新驗證碼按鈕樣式 */
+.refresh-button {
+    margin-left: 10px;
+    padding: 10px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.refresh-button:hover {
+    background-color: rgb(7, 23, 73);
+}
+
+/* 其他輸入框樣式 */
+input[type="text"], input[type="password"] {
+    width: 200px;
+    padding: 4px;
+    margin-bottom: 10px;
+    border: 2px solid #000000;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+

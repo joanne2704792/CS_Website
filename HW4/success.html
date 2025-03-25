@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登入成功</title>
+</head>
+<body>
+    <h2>JS中冒泡和捕獲的差異</h2>
+    <p>DOM 事件傳遞機制：「傳遞與冒泡」<br>
+        事件傳遞機制總共分為三大階段： <br>
+        1. 捕獲階段 (Capture Phase)<br>
+        在捕獲階段，DOM 的事件會從祖先層 (window) 開始往下尋找目標 (target)，這個過稱稱為捕獲階段 (CAPTURING_PHASE)。<br>
+        2. 目標階段 (Target Phase)<br>
+        在找到目標的時候，就會是目標階段 (AT_TARGET)。<br>
+        3. 冒泡階段 (Bubbling Phase)<br>
+        循著原路回去的過程，就是冒泡階段 (BUBBLING_PHASE)。
+           此階段的順序為先捕獲，再冒泡<br>
+           -----<br>
+           冒泡:從觸發元素開始向父元素傳播事件的過程。<br>
+           捕獲:相反的，從父元素開始，向觸發元素傳播事件。
+    </p>
+
+    <h2>Git裡的衝突是什麼</h2>
+    <p>衝突是指當嘗試將一個分支的變更合併到另一個分支時，Git
+        無法自動解決某些文件的修改。<br>
+        1.同一個文件的同一部分被不同人修改<br>
+        ex:兩個人都在不同的分支上修改了同一行代碼，當合併時Git不知道應該保留哪個版本的變更。<br>
+        2.同一個文件被刪除和修改：一個分支刪除了文件，而另一個分支對同一文件進行了修改。</p>
+</body>
+</html>
